@@ -1,3 +1,3 @@
-LOCAL_PATH := device/samsung/j5lte
+LOCAL_PATH := device/samsung/j3lte
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_j3lte.mk
+	$(LOCAL_DIR)/lineage_j3lte.mk
