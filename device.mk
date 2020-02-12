@@ -15,13 +15,22 @@
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# Release name
+PRODUCT_RELEASE_NAME := Samsung Galaxy J3
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
+
+## Device identifier. This must come after all inclusions
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_CHARACTERISTICS := phone
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
 # Inherit from common
 $(call inherit-product, device/samsung/msm8916-common/msm8916.mk)
 
-# Inherit from vendor
-$(call inherit-product-if-exists, vendor/samsung/j5-common/j5-common-vendor.mk)
-
-LOCAL_PATH := device/samsung/j5-common
+LOCAL_PATH := device/samsung/j3ltekx
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -31,7 +40,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
 
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk

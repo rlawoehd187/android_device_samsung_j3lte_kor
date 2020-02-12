@@ -12,11 +12,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-LOCAL_PATH := $(call my-dir)
+ PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/lineage_j3ltekx.mk
 
-ifneq ($(filter j3ltekx, $(TARGET_DEVICE)),)
-
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-
-endif
+COMMON_LUNCH_CHOICES := \
+    lineage_j3ltekx-user \
+    lineage_j3ltekx-userdebug \
+    lineage_j3ltekx-eng
